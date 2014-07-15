@@ -1,9 +1,8 @@
 /***************************************************************************
  * 
  * Copyright (c) 2014 whuqin, All Rights Reserved
- * Given a singly linked list L: L0¡úL1¡ú¡­¡úLn-1¡úLn,
- * reorder it to: L0¡úLn¡úL1¡úLn-1¡úL2¡úLn-2¡ú¡­
- *
+ * Given a singly linked list L: L0 -> L1 -> L2 -> ... -> Ln-1 -> Ln
+ * reorder it to: L0 -> Ln -> L1 -> Ln-1 -> L2 -> Ln-2 -> ...
  * You must do this in-place without altering the nodes' values.
  *
  * For example,
@@ -29,39 +28,39 @@ ListNode* reverseList(ListNode* head)
     }
     return p1;
 }
-    void reorderList(ListNode *head) {
-        if (NULL == head || NULL == head->next)
-        {
-            return;
-        }
-        //split
-        ListNode* slow = head;
-        ListNode* fast = head;
-        while (slow->next != NULL && fast->next != NULL && fast->next->next != NULL)
-        {
-            slow = slow->next;
-            fast = fast->next->next;
-        }
-        ListNode* tail = slow->next;
-        slow->next = NULL;
-        //reverse tail
-        tail = reverseList(tail);
-        //merge head tail
-        ListNode* h = head;
-        ListNode* t = tail;
-        while (h != NULL && t != NULL)
-        {
-            ListNode* tmp = h->next;
-            h->next = t;
-            t = t->next;
-            h->next->next = tmp;
-            h = tmp;
-        }
-        if (t != NULL)
-        {
-            h->next = t;
-        }
+
+void reorderList(ListNode *head) {
+    if (NULL == head || NULL == head->next) {
+        return;
     }
+    //split
+    ListNode* slow = head;
+    ListNode* fast = head;
+    while (fast->next != NULL && fast->next->next != NULL)
+    {
+        slow = slow->next;
+        fast = fast->next->next;
+    }
+    ListNode* tail = slow->next;
+    slow->next = NULL;
+    //reverse tail
+    tail = reverseList(tail);
+    //merge head tail
+    ListNode* h = head;
+    ListNode* t = tail;
+    while (h != NULL && t != NULL)
+    {
+        ListNode* tmp = h->next;
+        h->next = t;
+        t = t->next;
+        h->next->next = tmp;
+        h = tmp;
+    }
+    if (t != NULL)
+    {
+        h->next = t;
+    }
+}
 
 
 
