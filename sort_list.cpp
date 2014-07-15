@@ -1,6 +1,6 @@
 /***************************************************************************
  * 
- * Copyright (c) 2014. All Rights Reserved
+ * Copyright (c) 2014 whuqin. All Rights Reserved
  * Sort a linked list in O(n log n) time using constant space complexity.
  **************************************************************************/
 #include <iostream>

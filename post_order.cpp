@@ -50,13 +50,12 @@ vector<int> postorderTraversal(TreeNode *root) {
     while (!node_stack.empty())
     {
         TreeNode* tmp = node_stack.top();
-        node_stack.pop();
         if (NULL == tmp->left && NULL == tmp->right)
         {
             result.push_back(tmp->val);
+            node_stack.pop();
             continue;
         }
-        node_stack.push(tmp);
         if (tmp->right != NULL)
         {
             node_stack.push(tmp->right);

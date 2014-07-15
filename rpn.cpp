@@ -1,6 +1,6 @@
 /***************************************************************************
  * 
- * Copyright (c) 2014. All Rights Reserved
+ * Copyright (c) 2014 whuqin. All Rights Reserved
  * Evaluate the value of an arithmetic expression in Reverse Polish Notation.
  * Valid operators are +, -, *, /. Each operand may be an integer or another expression.
  * Some examples:

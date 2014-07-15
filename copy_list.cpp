@@ -13,6 +13,8 @@ struct RandomListNode {
     RandomListNode *next, *random;
     RandomListNode(int x) : label(x), next(NULL), random(NULL) {}
 };
+
+
  
 RandomListNode *copyRandomList(RandomListNode *head) {
     if (NULL == head)

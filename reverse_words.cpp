@@ -1,6 +1,6 @@
 /***************************************************************************
  * 
- * Copyright (c) 2014. All Rights Reserved
+ * Copyright (c) 2014 whuqin. All Rights Reserved
  *
  * Given an input string, reverse the string word by word.
  * For example,

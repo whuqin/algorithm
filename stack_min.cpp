@@ -1,5 +1,5 @@
 /***************************************************************************
- * 
+ * whuqin 
  * Design a stack which returns the smallest element in O(1) time. 
  * Space constraint also has to be considered if you use extra space
  * 
