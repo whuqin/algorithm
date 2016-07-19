@@ -13,7 +13,7 @@
 using namespace std;
 
 vector<int> twoSum(vector<int>& nums, int target) {
-    map<int, int> num_pair;
+    map<int, int> num_pair;//key is required number, value is the index: value[index] + key = target
     vector<int> result;
     for (int i = 0; i < nums.size(); ++i) {
         //whether nums[i] is the right operand of one left operand
