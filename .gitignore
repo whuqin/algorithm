@@ -9,6 +9,7 @@
 **/*.iml
 *.iml
 *.iws
+out/production/
 
 # Mac
 .DS_Store
@@ -25,3 +26,4 @@ release/
 *.py[cod]
 
 *~
+*.class
