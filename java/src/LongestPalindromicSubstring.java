@@ -15,7 +15,7 @@ public class LongestPalindromicSubstring {
             return 0;
         }
         if (s.charAt(i) == s.charAt(j)) {
-            return longestPalindrome(s, i + 1, j -1) + 2;
+            return longestPalindrome(s, ++i, --j) + 2;
         } else {
             return Math.max(longestPalindrome(s, i, j-1), longestPalindrome(s, i + 1, j));
         }
@@ -48,8 +48,10 @@ public class LongestPalindromicSubstring {
         return lps;
     }
 
+
+
     public static void main(String[] args) {
-        String s = "cbbd";
+        String s = "abccbaa";
         System.out.println(lps(s));
         System.out.println(longestPalindrome(s, 0, s.length() - 1));
     }
