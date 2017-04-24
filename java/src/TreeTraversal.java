@@ -6,11 +6,6 @@ import java.util.Stack;
  * Created by qinbin on 2017/4/6.
  */
 public class TreeTraversal {
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-    }
     public static List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> list = new ArrayList<>();
         if (null == root) {
