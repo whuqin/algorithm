@@ -19,6 +19,5 @@ public class BreadthFirstTraversal {
         }
         traversal(node.left, level + 1, result, !direction);
         traversal(node.right, level + 1, result, !direction);
-
     }
 }
